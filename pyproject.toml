@@ -11,7 +11,9 @@ dependencies = [
     "ipython>=8.10",
     "jupyterlab>=3.0",
     "notebook",
-    "kedro~=0.19.12"
+    "kedro~=0.19.12",
+    "kedro-datasets[json,yaml]>=4.1.0",
+    "kedro-viz>=11.0.0",
 ]
 
 [project.scripts]
@@ -100,3 +102,6 @@ exclude = '''
 '''
 preview = true
 unstable = true
+
+[tool.kedro_telemetry]
+project_id = "d391424843ed4510a05caa8e310128d6"
