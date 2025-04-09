@@ -5,7 +5,7 @@ repos:
     rev: v5.0.0  # Use the ref you want to point at
     hooks:
       - id: trailing-whitespace  # Check for trailing whitespace
-      # - id: no-commit-to-branch  # Prevent commits to a branch
+      - id: no-commit-to-branch  # Prevent commits to a branch
       - id: mixed-line-ending  # Check for mixed line ending
       - id: end-of-file-fixer  # Fix missing EOF at the end of files
       - id: check-ast  # Simply check whether files parse as valid python.
