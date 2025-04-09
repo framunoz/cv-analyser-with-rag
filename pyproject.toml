@@ -35,7 +35,9 @@ dev = [
     "pytest-cov~=3.0",
     "pytest-mock>=1.7.1, <2.0",
     "pytest~=7.2",
-    "ruff~=0.1.8"
+    "ruff~=0.1.8",
+    "black>=25.1.0",
+    "pre-commit>=4.2.0",
 ]
 
 [tool.setuptools.dynamic]
@@ -79,3 +81,22 @@ select = [
     "T201", # Print Statement
 ]
 ignore = ["E501"]  # Ruff format takes care of line-too-long
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+exclude = '''
+/(
+    \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+)/
+'''
+preview = true
+unstable = true

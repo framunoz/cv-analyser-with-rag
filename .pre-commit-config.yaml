@@ -1,0 +1,55 @@
+default_install_hook_types: [ pre-commit, commit-msg ]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0  # Use the ref you want to point at
+    hooks:
+      - id: trailing-whitespace  # Check for trailing whitespace
+      # - id: no-commit-to-branch  # Prevent commits to a branch
+      - id: mixed-line-ending  # Check for mixed line ending
+      - id: end-of-file-fixer  # Fix missing EOF at the end of files
+      - id: check-ast  # Simply check whether files parse as valid python.
+      - id: check-toml  # Check TOML files with toml
+      - id: check-yaml  # Check YAML files with yaml
+
+  - repo: https://github.com/PyCQA/autoflake
+    rev: v2.3.1
+    hooks:
+      - id: autoflake
+        args: [
+          "--in-place",
+          "--remove-unused-variables",
+          "--remove-all-unused-imports"
+        ]
+
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 24.8.0
+    hooks:
+      - id: black-jupyter
+        # It is recommended to specify the latest version of Python
+        # supported by your project here, or alternatively use
+        # pre-commit's default_language_version, see
+        # https://pre-commit.com/#top_level-default_language_version
+        language_version: python3.12
+        stages: [ pre-commit ]
+
+  #  - repo: "https://github.com/commitizen-tools/commitizen"
+  #    rev: "v4.1.0"
+  #    hooks:
+  #      - id: commitizen
+  #        stages: [ commit-msg ]
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: "v0.8.3"
+    hooks:
+      - id: ruff
+        stages: [ pre-commit ]
+
+  # waiting for https://github.com/gee-community/geetools/issues/337
+  # so notebooks can again be executed from the documentation
+  - repo: "https://github.com/kynan/nbstripout"
+    rev: "0.8.1"
+    hooks:
+      - id: nbstripout
+        args: [ "--drop-empty-cells", "--keep-id" ]
+        stages: [ pre-commit ]
