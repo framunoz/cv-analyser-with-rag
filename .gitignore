@@ -18,6 +18,10 @@ data/**
 # also keep all .gitkeep files
 !.gitkeep
 
+# aaand the cv_example.json with the README...
+!data/01_raw/cv_example.json
+!README.md
+
 # ignore kedro-viz metadata
 .viz
 
