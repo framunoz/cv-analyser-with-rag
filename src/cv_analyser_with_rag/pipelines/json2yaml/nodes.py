@@ -6,7 +6,7 @@ generated using Kedro 0.19.12
 import typing as t
 
 
-def convert_json_to_yaml(json_data: dict[t.Any, t.Any]) -> dict[t.Any, t.Any]:
+def convert_json_to_yaml(json_data: dict[str, t.Any]) -> dict[str, t.Any]:
     """
     Convert JSON data to YAML format.
 
