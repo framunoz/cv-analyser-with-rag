@@ -139,7 +139,7 @@ target/
 .ipython/profile_default/startup/README
 
 # pyenv
-.python-version
+# .python-version
 
 # celery beat schedule file
 celerybeat-schedule
