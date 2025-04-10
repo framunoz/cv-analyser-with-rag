@@ -6,7 +6,7 @@
         "email": "john@gmail.com",
         "phone": "(912) 555-4321",
         "url": "https://johndoe.com",
-        "summary": "A summary of John Doe…",
+        "summary": "A summary of John Doe...",
         "location": {
             "address": "2712 Broadway St",
             "postalCode": "CA 94115",
@@ -29,7 +29,7 @@
             "url": "https://company.com",
             "startDate": "2013-01-01",
             "endDate": "2014-01-01",
-            "summary": "Description…",
+            "summary": "Description...",
             "highlights": [
                 "Started the company"
             ]
@@ -42,7 +42,7 @@
             "url": "https://organization.com/",
             "startDate": "2012-01-01",
             "endDate": "2013-01-01",
-            "summary": "Description…",
+            "summary": "Description...",
             "highlights": [
                 "Awarded 'Volunteer of the Month'"
             ]
@@ -84,7 +84,7 @@
             "publisher": "Company",
             "releaseDate": "2014-10-01",
             "url": "https://publication.com",
-            "summary": "Description…"
+            "summary": "Description..."
         }
     ],
     "skills": [
@@ -116,7 +116,7 @@
     "references": [
         {
             "name": "Jane Doe",
-            "reference": "Reference…"
+            "reference": "Reference..."
         }
     ],
     "projects": [

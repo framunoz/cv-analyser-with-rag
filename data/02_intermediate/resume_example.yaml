@@ -14,7 +14,7 @@ basics:
   - network: Twitter
     url: https://twitter.com/john
     username: john
-  summary: "A summary of John Doe\u2026"
+  summary: "A summary of John Doe..."
   url: https://johndoe.com
 
 work:
@@ -24,7 +24,7 @@ work:
   name: Company
   position: President
   startDate: '2013-01-01'
-  summary: "Description\u2026"
+  summary: "Description..."
   url: https://company.com
 
 volunteer:
@@ -34,7 +34,7 @@ volunteer:
   organization: Organization
   position: Volunteer
   startDate: '2012-01-01'
-  summary: "Description\u2026"
+  summary: "Description..."
   url: https://organization.com/
 
 education:
@@ -64,7 +64,7 @@ publications:
 - name: Publication
   publisher: Company
   releaseDate: '2014-10-01'
-  summary: "Description\u2026"
+  summary: "Description..."
   url: https://publication.com
 
 skills:
@@ -87,7 +87,7 @@ interests:
 
 references:
 - name: Jane Doe
-  reference: "Reference\u2026"
+  reference: "Reference..."
 
 projects:
 - description: Description...
