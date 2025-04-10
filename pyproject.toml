@@ -11,7 +11,12 @@ dependencies = [
     "ipython>=8.10",
     "jupyterlab>=3.0",
     "notebook",
-    "kedro~=0.19.12"
+    "kedro~=0.19.12",
+    "kedro-datasets[json,yaml]>=4.1.0",
+    "kedro-viz>=11.0.0",
+    "google-genai>=1.10.0",
+    "chromadb>=1.0.3",
+    "google-api-core>=2.24.2",
 ]
 
 [project.scripts]
@@ -80,7 +85,11 @@ select = [
     "PL",  # Pylint
     "T201", # Print Statement
 ]
-ignore = ["E501"]  # Ruff format takes care of line-too-long
+ignore = [
+"E501",  # Ruff format takes care of line-too-long
+"PLR0913",  # Too many arguments
+"I001",  # isort: skip
+]
 
 [tool.black]
 line-length = 88
@@ -100,3 +109,6 @@ exclude = '''
 '''
 preview = true
 unstable = true
+
+[tool.kedro_telemetry]
+project_id = "d391424843ed4510a05caa8e310128d6"

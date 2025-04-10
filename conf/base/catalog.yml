@@ -2,3 +2,11 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+json_resume:
+  type: json.JSONDataset
+  filepath: data/01_raw/resume.json
+
+resume:
+  type: yaml.YAMLDataset
+  filepath: data/02_intermediate/resume.yaml

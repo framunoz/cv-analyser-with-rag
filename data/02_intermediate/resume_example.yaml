@@ -1,0 +1,99 @@
+basics:
+  email: john@gmail.com
+  image: ''
+  label: Programmer
+  location:
+    address: 2712 Broadway St
+    city: San Francisco
+    countryCode: US
+    postalCode: CA 94115
+    region: California
+  name: John Doe
+  phone: (912) 555-4321
+  profiles:
+  - network: Twitter
+    url: https://twitter.com/john
+    username: john
+  summary: "A summary of John Doe\u2026"
+  url: https://johndoe.com
+
+work:
+- endDate: '2014-01-01'
+  highlights:
+  - Started the company
+  name: Company
+  position: President
+  startDate: '2013-01-01'
+  summary: "Description\u2026"
+  url: https://company.com
+
+volunteer:
+- endDate: '2013-01-01'
+  highlights:
+  - Awarded 'Volunteer of the Month'
+  organization: Organization
+  position: Volunteer
+  startDate: '2012-01-01'
+  summary: "Description\u2026"
+  url: https://organization.com/
+
+education:
+- area: Software Development
+  courses:
+  - DB1101 - Basic SQL
+  endDate: '2013-01-01'
+  institution: University
+  score: '4.0'
+  startDate: '2011-01-01'
+  studyType: Bachelor
+  url: https://institution.com/
+
+awards:
+- awarder: Company
+  date: '2014-11-01'
+  summary: There is no spoon.
+  title: Award
+
+certificates:
+- date: '2021-11-07'
+  issuer: Company
+  name: Certificate
+  url: https://certificate.com
+
+publications:
+- name: Publication
+  publisher: Company
+  releaseDate: '2014-10-01'
+  summary: "Description\u2026"
+  url: https://publication.com
+
+skills:
+- keywords:
+  - HTML
+  - CSS
+  - JavaScript
+  level: Master
+  name: Web Development
+
+languages:
+- fluency: Native speaker
+  language: English
+
+interests:
+- keywords:
+  - Ferrets
+  - Unicorns
+  name: Wildlife
+
+references:
+- name: Jane Doe
+  reference: "Reference\u2026"
+
+projects:
+- description: Description...
+  endDate: '2021-01-01'
+  highlights:
+  - Won award at AIHacks 2016
+  name: Project
+  startDate: '2019-01-01'
+  url: https://project.com/
