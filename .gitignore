@@ -19,7 +19,8 @@ data/**
 !.gitkeep
 
 # aaand the cv_example.json with the README...
-!data/01_raw/cv_example.json
+!data/01_raw/resume_example.json
+!data/02_intermediate/resume_example.yaml
 !README.md
 
 # ignore kedro-viz metadata
