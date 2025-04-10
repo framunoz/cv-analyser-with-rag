@@ -8,30 +8,32 @@ This is your new Kedro project, which was generated using `kedro 0.19.12`.
 
 Take a look at the [Kedro documentation](https://docs.kedro.org) to get started.
 
-## Rules and guidelines
-
-In order to get the best out of the template:
-
-* Don't remove any lines from the `.gitignore` file we provide
-* Make sure your results can be reproduced by following a data engineering convention
-* Don't commit data to your repository
-* Don't commit any credentials or your local configuration to your repository. Keep all your credentials and local configuration in `conf/local/`
-
 ## How to install dependencies
 
-Declare any dependencies in `requirements.txt` for `pip` installation.
+The dependencies are handled through the `pyproject.toml` file using [`uv`](https://astral.sh/blog/uv). To install `uv`, you can consult the [`uv` documentation](https://docs.astral.sh/uv/getting-started/installation/). To install the dependencies, run the following command:
 
-To install them, run:
+```bash
+uv venv
+source .venv/bin/activate  # on Windows use .venv\Scripts\activate
+uv sync
+```
 
+The first line will create a virtual environment and the second will install all the necessary dependencies for the project.
+
+If you are a developer, you can run the following command to install the optional dependencies and install the pre-commit hooks:
+
+```bash
+uv sync --all-extras
+pre-commit install
 ```
-pip install -r requirements.txt
-```
+
+
 
 ## How to run your Kedro pipeline
 
 You can run your Kedro project with:
 
-```
+```bash
 kedro run
 ```
 
@@ -39,7 +41,7 @@ kedro run
 
 Have a look at the file `src/tests/test_run.py` for instructions on how to write your tests. You can run your tests as follows:
 
-```
+```bash
 pytest
 ```
 
@@ -56,38 +58,40 @@ To see and update the dependency requirements for your project use `requirements
 
 > Note: Using `kedro jupyter` or `kedro ipython` to run your notebook provides these variables in scope: `context`, 'session', `catalog`, and `pipelines`.
 >
-> Jupyter, JupyterLab, and IPython are already included in the project requirements by default, so once you have run `pip install -r requirements.txt` you will not need to take any extra steps before you use them.
+> Jupyter, JupyterLab, and IPython are already included in the project requirements by default, so once you have run `pip install -r requirements.txt` (or `uv sync`) you will not need to take any extra steps before you use them.
 
 ### Jupyter
 To use Jupyter notebooks in your Kedro project, you need to install Jupyter:
 
-```
+```bash
 pip install jupyter
+uv pip install jupyter  # if you are using uv
 ```
 
 After installing Jupyter, you can start a local notebook server:
 
-```
+```bash
 kedro jupyter notebook
 ```
 
 ### JupyterLab
 To use JupyterLab, you need to install it:
 
-```
+```bash
 pip install jupyterlab
+uv pip install jupyterlab  # if you are using uv
 ```
 
 You can also start JupyterLab:
 
-```
+```bash
 kedro jupyter lab
 ```
 
 ### IPython
 And if you want to run an IPython session:
 
-```
+```bash
 kedro ipython
 ```
 
