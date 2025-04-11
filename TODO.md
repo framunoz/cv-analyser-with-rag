@@ -4,7 +4,7 @@
 
 * [ ] Hacer una rama para experimentar como pasar un curriculum de pdf en el json que tenemos (esto será otra pipeline)
     * [ ] Hacer curriculum ficticio (con chatgpt) y oferta ficticia
-    * [ ] Investigar si se puede pasar un pdf directo al modelo (en un pathh o algo así)
+      * [ ] Investigar si se puede pasar un pdf directo al modelo (en un path o algo así)
         * [ ] Si no, investigar alguna librería pdf to text en python
     * [ ] Crear TypedDict del json resume (usar resume_example.json como ejemplo)
     * [ ] Hacer prompt para que el modelo genere el json resume a partir del pdf
