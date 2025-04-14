@@ -14,11 +14,11 @@ The dependencies are handled through the `pyproject.toml` file using [`uv`](http
 
 ```bash
 uv venv
-source .venv/bin/activate  # on Windows use .venv\Scripts\activate
+source .venv/bin/activate  # on Windows use > . .venv\Scripts\Activate.ps1
 uv sync
 ```
 
-The first line will create a virtual environment and the second will install all the necessary dependencies for the project.
+The first and second lines will create and activate a virtual environment and the third will install all the necessary dependencies for the project.
 
 If you are a developer, you can run the following command to install the optional dependencies and install the pre-commit hooks:
 
@@ -27,7 +27,30 @@ uv sync --all-extras
 pre-commit install
 ```
 
+### 🪟 Windows-specific requirements (C++ compiler)
 
+Some dependencies in this project (e.g., `chroma-hnswlib`, required by `chromadb`) need to be compiled from source, which requires a C++ compiler on Windows.
+
+If you're on Windows, please make sure you install the Microsoft C++ Build Tools before running `uv sync`:
+
+- Download from: [https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+
+- During installation, make sure to check:
+    - ✅ C++ build tools
+    - ✅ Windows 10 SDK
+    - ✅ MSVC v14.x
+
+Once installed, restart your terminal and re-run:
+
+```bash
+uv sync
+```
+
+If you skip this step, you may get errors like:
+
+```
+error: Microsoft Visual C++ 14.0 or greater is required
+```
 
 ## How to run your Kedro pipeline
 
