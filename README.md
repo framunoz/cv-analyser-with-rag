@@ -52,6 +52,26 @@ If you skip this step, you may get errors like:
 error: Microsoft Visual C++ 14.0 or greater is required
 ```
 
+## How to Add Gemini API Credentials
+
+To use the Gemini API in this project, you need to provide your API credentials. Follow these steps to securely add and access your credentials:
+
+### 1. Locate the `credentials.yml` File
+The credentials for your project are stored in a YAML file located in the `conf/local/` directory. This file is ignored by version control to keep your sensitive information secure.
+
+If the file does not exist, create it at the following path:
+```
+conf/local/credentials.yml
+```
+
+### 2. Add Your Gemini API Credentials
+Open the `credentials.yml` file and add your Gemini API credentials in the following format:
+```yaml
+google_api_credentials:
+  key: "your_gemini_api_key"
+```
+By following these steps, you can securely configure and use the Gemini API in your Kedro project.
+
 ## How to run your Kedro pipeline
 
 You can run your Kedro project with:
