@@ -5,8 +5,8 @@
 
 json_resume:
   type: json.JSONDataset
-  filepath: data/01_raw/resume.json
+  filepath: data/01_raw/resume_example.json
 
 resume:
   type: yaml.YAMLDataset
-  filepath: data/02_intermediate/resume.yaml
+  filepath: data/02_intermediate/resume_example.yaml
