@@ -11,10 +11,12 @@
   * [ ] Crear TypedDict del json resume (usar resume_example.json como ejemplo)
   * [ ] Hacer prompt para que el modelo genere el json resume a partir del pdf
 
-* [ ] Traducir y documentar el notebook generado
+* [X] Traducir el notebook generado
 
-* [ ] Investigar cómo se puede salvar un chromadb en memoria
+* [ ] Documentar el notebook generado
 
-* [ ] Modularizar en funciones el embedding del RAG
+* [X] Investigar cómo se puede salvar un chromadb en memoria
+
+* [X] Modularizar en funciones el embedding del RAG
 
 * [ ] Hacer distintos embeddings por categoría
