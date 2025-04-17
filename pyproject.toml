@@ -12,11 +12,13 @@ dependencies = [
     "jupyterlab>=3.0",
     "notebook",
     "kedro~=0.19.12",
-    "kedro-datasets[json,yaml]>=4.1.0",
+    "kedro-datasets[json,pandas,yaml]>=4.1.0",
     "kedro-viz>=11.0.0",
     "google-genai>=1.10.0",
     "chromadb>=1.0.3",
     "google-api-core>=2.24.2",
+    "pyarrow>=19.0.1",
+    "pdfplumber>=0.11.6",
 ]
 
 [project.scripts]
