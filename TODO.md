@@ -19,4 +19,4 @@
 
 * [X] Modularizar en funciones el embedding del RAG
 
-* [ ] Hacer distintos embeddings por categoría
+* [X] Hacer distintos embeddings por categoría
