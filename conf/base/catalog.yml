@@ -2,6 +2,9 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+pdf_resume:
+  type: cv_analyser_with_rag.datasets.PDFPlumberDataset
+  filepath: data/01_raw/resume_example.pdf
 
 json_resume:
   type: json.JSONDataset
