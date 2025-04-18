@@ -13,3 +13,7 @@ json_resume:
 resume:
   type: yaml.YAMLDataset
   filepath: data/02_intermediate/resume_example.yaml
+
+json_resume_from_pdf:
+  type: json.JSONDataset
+  filepath: data/02_intermediate/json_resume_from_pdf.json
