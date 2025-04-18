@@ -15,8 +15,7 @@
 
 * [ ] Documentar el notebook generado
 
-* [X] Investigar cómo se puede salvar un chromadb en memoria
-
+* [X] Investigar cómo se puede guardar un chromadb en memoria
 * [X] Modularizar en funciones el embedding del RAG
 
 * [X] Hacer distintos embeddings por categoría
