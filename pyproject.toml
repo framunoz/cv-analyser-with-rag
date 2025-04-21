@@ -42,7 +42,7 @@ dev = [
     "pytest-cov~=3.0",
     "pytest-mock>=1.7.1, <2.0",
     "pytest~=7.2",
-    "ruff~=0.1.8",
+    "ruff",
     "black>=25.1.0",
     "pre-commit>=4.2.0",
 ]
