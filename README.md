@@ -1,12 +1,83 @@
-# cv-analyser-with-rag
+# CV Analyser with RAG 📄🤖
 
 [![Powered by Kedro](https://img.shields.io/badge/powered_by-kedro-ffc900?logo=kedro)](https://kedro.org)
 
-## Overview
+## 🎯 Overview
 
-This is your new Kedro project, which was generated using `kedro 0.19.12`.
+**CV Analyser with RAG** is an intelligent resume optimization tool that uses **Retrieval Augmented Generation (RAG)** to help job seekers tailor their CVs for specific job postings. The system analyzes job descriptions and automatically adapts resume content to maximize compatibility with **Applicant Tracking Systems (ATS)** while maintaining authenticity and personal branding.
 
-Take a look at the [Kedro documentation](https://docs.kedro.org) to get started.
+### 🔍 The Problem We Solve
+
+In today's competitive job market:
+- **95% of Fortune 500 companies** use ATS to filter resumes before human review
+- Many qualified candidates are rejected due to **keyword mismatches** between their CV and job descriptions
+- Manual resume tailoring is **time-consuming and error-prone**
+- Job seekers struggle to **optimize for ATS without losing their authentic voice**
+
+### 💡 Our Solution
+
+This project combines **AI-powered analysis** with **semantic search** to:
+
+1. **📄 Extract & Structure**: Convert PDF resumes into structured JSON format using [JSON Resume Schema](https://jsonresume.org/schema)
+2. **🧠 Understand Context**: Use Google Gemini AI to analyze job descriptions and identify key requirements
+3. **🔍 Semantic Matching**: Leverage ChromaDB vector database to find relevant experiences from your CV
+4. **✨ Intelligent Optimization**: Generate ATS-friendly content that maintains your personal brand and uses active voice
+5. **🎯 Maximize Compatibility**: Ensure 100% ATS compatibility while keeping content concise and compelling
+
+### 🏗️ Why Kedro?
+
+We chose **Kedro** as our pipeline framework because:
+- **Reproducible Pipelines**: Ensures consistent CV processing across different job applications
+- **Data Lineage**: Track how your original CV transforms into optimized versions
+- **Modular Architecture**: Easy to add new analysis steps or AI models
+- **Configuration Management**: Securely handle API credentials and processing parameters
+- **Experiment Tracking**: Compare different optimization strategies and their effectiveness
+
+## 🚀 Core Features
+
+### 📊 Intelligent CV Analysis
+- **PDF to JSON Conversion**: Automatically extract structured data from PDF resumes
+- **Schema Validation**: Ensure data compatibility with JSON Resume standard
+- **Content Categorization**: Organize experiences, skills, education, and achievements
+
+### 🎯 Job Description Matching
+- **Keyword Extraction**: Identify critical terms and requirements from job postings
+- **Semantic Understanding**: Go beyond simple keyword matching using AI embeddings
+- **Context Awareness**: Understand industry-specific terminology and requirements
+
+### 🔍 RAG-Powered Optimization
+- **Vector Search**: Use ChromaDB to find relevant experiences from your CV history
+- **Contextual Retrieval**: Retrieve the most relevant past experiences for each job
+- **Smart Adaptation**: Intelligently modify descriptions while preserving accuracy
+
+### ✨ ATS Optimization
+- **Keyword Integration**: Naturally incorporate job-specific keywords
+- **Active Voice Conversion**: Transform descriptions to use compelling active voice
+- **Concise Formatting**: Optimize length and structure for ATS parsing
+- **Brand Consistency**: Maintain your personal voice and professional brand
+
+## 🏛️ Architecture
+
+```
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   PDF Resume    │───▶│  Kedro Pipeline  │───▶│ Optimized CV    │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+                               │
+                               ▼
+       ┌─────────────────────────────────────────────────────┐
+       │                 Core Components                     │
+       ├─────────────────┬─────────────────┬─────────────────┤
+       │   Google Gemini │   ChromaDB      │ JSON Resume     │
+       │   (AI Analysis) │ (Vector Store)  │   (Schema)      │
+       └─────────────────┴─────────────────┴─────────────────┘
+```
+
+**Tech Stack:**
+- 🧠 **Google Gemini API**: Advanced language understanding and generation
+- 🗄️ **ChromaDB**: Vector database for semantic search and embeddings
+- ⚙️ **Kedro**: Pipeline orchestration and data management
+- 📋 **JSON Resume Schema**: Standardized CV data structure
+- 🐍 **Python**: Core development language with rich AI/ML ecosystem
 
 ## How to install dependencies
 
@@ -146,3 +217,75 @@ To automatically strip out all output cell contents before committing to `git`, 
 ## Package your Kedro project
 
 [Further information about building project documentation and packaging your project](https://docs.kedro.org/en/stable/tutorial/package_a_project.html)
+
+## 🎯 Project Objectives
+
+### Short-term Goals
+- ✅ **Core Pipeline**: Implement end-to-end CV processing pipeline
+- ✅ **RAG Integration**: Enable semantic search and content retrieval
+- ✅ **ATS Optimization**: Generate ATS-compatible resume variations
+- 🔄 **Multi-language Support**: Support for Spanish and English optimization
+- 🔄 **Batch Processing**: Handle multiple job descriptions efficiently
+
+### Long-term Vision
+- 🚀 **Real-time API**: Web service for instant CV optimization
+- 📊 **Success Analytics**: Track application success rates and optimize accordingly
+- 🎨 **Template Generation**: Generate formatted resumes in multiple styles
+- 🤖 **Interview Prep**: Extend to interview question preparation based on job analysis
+- 🌐 **Platform Integration**: Direct integration with job boards and application systems
+
+## 🤝 How to Contribute
+
+We welcome contributions! Here are ways to get involved:
+
+### 🐛 Found a Bug?
+1. Check existing [issues](https://github.com/framunoz/cv-analyser-with-rag/issues)
+2. Create a detailed bug report with reproduction steps
+3. Include sample data (anonymized) if relevant
+
+### 💡 Have an Idea?
+1. Open a feature request issue
+2. Describe the use case and expected behavior
+3. Discuss implementation approaches
+
+### 🔧 Want to Code?
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Follow the existing code style and add tests
+4. Submit a pull request with clear description
+
+### 📚 Improve Documentation?
+- Fix typos or unclear explanations
+- Add examples and use cases
+- Translate content to other languages
+- Improve code comments and docstrings
+
+## 📋 Next Steps
+
+Ready to optimize your CV? Here's what to do:
+
+1. **📥 Setup**: Follow the installation instructions above
+2. **🔑 Configure**: Add your Gemini API credentials
+3. **📄 Prepare**: Place your PDF resume in the `data/01_raw/` folder
+4. **🏃‍♂️ Run**: Execute `kedro run` to process your CV
+5. **🎯 Optimize**: Use the notebooks to analyze specific job descriptions
+6. **📊 Review**: Check the generated optimized content in `data/08_reporting/`
+
+### 📖 Learning Resources
+- [Kedro Documentation](https://docs.kedro.org) - Learn about the pipeline framework
+- [JSON Resume Schema](https://jsonresume.org/schema) - Understand the CV data structure
+- [Google Gemini API](https://ai.google.dev/) - Explore AI capabilities
+- [ChromaDB Documentation](https://docs.trychroma.com/) - Vector database operations
+
+### 🎓 Advanced Usage
+Check out our notebooks for advanced features:
+- `00-pdf-to-json.ipynb`: Convert and validate PDF resumes
+- `01-fmg-rag.ipynb`: Interactive RAG analysis
+- `02-fmg-refactor.ipynb`: Batch processing and optimization
+- `colab-rag.ipynb`: Google Colab compatible version
+
+---
+
+**⚠️ Important**: Always review AI-generated content before using it in real applications. This tool assists with optimization but human judgment is essential for final decisions.
+
+**🔒 Privacy**: Your CV data is processed locally. API calls to Google Gemini only send anonymized text snippets for analysis.
